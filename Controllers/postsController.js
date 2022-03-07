@@ -40,32 +40,6 @@ exports.find = async (req, res) => {
 
 
 exports.update = async (req, res) => {
-    // try{
-    //     await Post.findByIdAndUpdate(
-    //         req.query.id, 
-    //         {$set: req.body},
-    //         {new:true}
-    //         )
-    //         res.redirect('/')
-    //     }catch(err){
-    //         res.status(500).json(err);
-    //     }
-
-//     if(!req.body){
-//         return res.status(400).send({message:"data is empty"})
-//     }
-//     const id = req.params.id;
-//     Post.findByIdAndUpdate(id, req.body,{useFindAndModify: false})
-//     .then(data=>{
-//         if(!data){
-//             res.status(404).send({message:"cannot update user"})
-//         }else{
-//             res.send(data)
-//         }
-//     })
-//     .catch(err => {
-//         res.status(500).json(err);
-//     })
     let new_image = '';
     if(req.file){
         try{
