@@ -1,0 +1,441 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: #222d32;
+  color: white;
+}
+
+@media all and (max-width: 900px) {
+  .card {
+    float: left;
+    /* border: 1px solid; */
+    max-width: 100%;
+    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.medsos {
+  padding: 5px;
+  width: 100%;
+  background-color: #0db8de;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+}
+.medsos .top-right {
+  color: white;
+  float: right;
+}
+.medsos .top-left {
+  float: left;
+}
+.medsos ul li {
+  display: inline-block;
+  color: white;
+  margin-right: 10px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header {
+  top: 25px;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  background-color: #222d32;
+}
+
+header h1 {
+  float: left;
+  padding: 15px 0px;
+  color: #0db8de;
+}
+
+header h1 span {
+  color: white;
+}
+
+header ul {
+  float: right;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a {
+  padding: 25px 20px;
+  display: inline-block;
+}
+
+header ul li:hover {
+  background-color: #0db8de;
+  color: #222d32;
+}
+
+.banner {
+  height: 60vh;
+  background-image: url(/public/img/belajar-coding-750x410.jpg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: block;
+  content: "";
+  background-color: #0db8de;
+  opacity: 0.7;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.banner h2 {
+  color: white;
+  z-index: 1;
+  padding: 20px 25px;
+  border: 5px solid #fff;
+}
+
+section h3 {
+  text-align: center;
+  padding: 20px 0;
+  color: #0db8de;
+  margin-bottom: 10px;
+}
+
+.about p {
+  line-height: 20px;
+  word-spacing: 2px;
+  /* color: #444444; */
+  text-align: center;
+}
+
+.box .col-3 {
+  padding: 20px;
+  /* border: 1px solid; */
+  text-align: justify;
+  display: inline-block;
+}
+
+.box .col-3 img {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.box .col-3 .card {
+  float: left;
+  /* border: 1px solid; */
+  max-width: 32%;
+  margin-left: 1%;
+  border-radius: 5px;
+  padding: 7px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card p {
+  margin: 10px 0;
+  padding: 0px 10px;
+}
+
+.card a {
+  padding: 5px 8px;
+  background-color: #0db8de;
+  float: right;
+}
+
+.card a:hover {
+  background-color: #444444;
+  color: white;
+}
+
+footer {
+  padding: 30px;
+  background-color: #0db8de;
+  color: #222d32;
+  text-align: center;
+}
+
+.loader {
+  background-color: #222d32;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #222d32;
+  border-radius: 50%;
+  border-top-color: whitesmoke;
+  border-right-color: whitesmoke;
+  border-bottom-color: whitesmoke;
+  animation: muter 0.5s linear infinite;
+}
+
+@keyframes muter {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.kotak {
+  padding: 20px;
+  color: #0db8de;
+  background: #162025 !important;
+  border-radius: 10px !important;
+}
+
+button {
+  width: 40%;
+}
+
+.isi {
+  top: 100px;
+}
+
+.container1 {
+  margin-top: 60px;
+  background-color: #222d32;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 50px;
+}
+
+.blank {
+  padding: 48px;
+  background-color: #162025;
+}
+
+h2 {
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.post-box {
+  margin: auto;
+  width: 80%;
+  border: 5px solid #0db8de;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.img {
+  margin-top: 3rem;
+}
+
+.file {
+  margin-bottom: 18px;
+}
+
+.form-control {
+  margin-bottom: 18px;
+}
+
+.field {
+  width: 80%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: rgb(230, 230, 230);
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.field:focus {
+  background-color: #fff;
+  border: 2px solid rgba(30, 85, 250, e.47);
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  background-color: #0db8de;
+  cursor: pointer;
+  outline: none;
+  border: blue;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0db8de;
+}
+
+.hero {
+  margin: 7.5em 1em 0.2em;
+  padding: 3em 0 1em;
+}
+
+.hero img {
+  margin: 1em auto 0;
+  display: block;
+  width: 70%;
+  height: auto;
+  border-radius: 0.6em;
+  animation: fadeIn 2s forwards;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+  padding-top: 0.8em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.35rem;
+  animation: fadeIn1 2s forwards;
+}
+
+.hero .paragraf {
+  padding: 1em 1em 0.1em;
+  text-align: justify;
+  animation: fadeIn 2s forwards;
+  line-height: 1.6em;
+  font-size: 0.8rem;
+}
+
+.hero .buttons {
+  display: inline;
+  margin: 0 auto;
+  padding-bottom: 1em;
+}
+
+.hero .action {
+  display: flex;
+  margin: 0 auto;
+}
+
+.hero .jc-center {
+  justify-content: center;
+}
+
+.hero button {
+  animation: fadeIn1 2s forwards;
+  background-color: #162025;
+  border-radius: 0.5em;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 0.7em;
+  text-align: center;
+  padding: 0.7em 0.6em;
+  display: inline;
+  width: 20%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin: 0 0.2em;
+}
+
+.hero button:hover {
+  background-color: #0b1418;
+}
+
+@media (min-width: 730px) {
+  .hero {
+    margin: 6em 1em 0.5em;
+    padding: 0 0;
+  }
+
+  .hero img {
+    width: 60%;
+  }
+
+  .hero h2 {
+    font-size: 2.4rem;
+    padding: 0.3em 0.5em;
+  }
+
+  .hero .paragraf {
+    word-spacing: 0;
+    font-size: 1.3rem;
+    padding: 0 2em;
+    line-height: 1.6em;
+    padding-bottom: 1em;
+  }
+
+  .hero button {
+    font-size: 1.3em;
+    width: 26%;
+  }
+
+  .hero .action {
+    padding: 0 11em;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero img {
+    width: 25%;
+    margin-bottom: 1em;
+  }
+
+  .hero h2 {
+    font-size: 2.4rem;
+    margin: 0 5em;
+  }
+
+  .hero .paragraf {
+    font-size: 1.3rem;
+    margin: 1em 9em 0;
+  }
+
+  .hero .action {
+    padding: 0 42em;
+  }
+
+  .hero button {
+    font-size: 1rem;
+    width: 20%;
+  }
+}

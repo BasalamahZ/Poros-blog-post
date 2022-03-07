@@ -14,10 +14,14 @@ const PostSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    image:{
+        type: String,
+        required: false,
+    },
     category: {
         type: Array,
         required: false,
-    },  
+    }
 },
 { timestamps: true }
 );

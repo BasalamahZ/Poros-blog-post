@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <!--Link icon-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+  <body>
+      <div class="medsos">
+        <div class="container">
+          <div class="top-left">
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-line"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-instagram-square"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="top-right">
+            <div class="logout"><a href="login.html">LOGIN</a></div>
+          </div>
+        </div>
+      </div>
+      <header>
+        <div class="container fw-bolder">
+          <h1>
+            <a href="/">POROS BLOG<span class="tiitk">.</span> </a>
+          </h1>
+          <ul>
+            <li class="active"><a href="/">HOME</a></li>
+            <li><a href="/create">POST</a></li>
+            <li><a href="#">PROFIL</a></li>
+          </ul>
+        </div>
+      </header>
+    <div class="hero">
+    <img src="/public/uploads/images/{{post.image}}" alt="postphoto">
+        <div class="buttons">
+            <div class="action jc-center">
+                <button type="submit">
+                    <a href="/post/update/{{post._id}}">Edit</a>
+                </button>
+                <button type="submit">
+                    <a class="delete" data-id={{post._id}} href="/">Delete</a>
+                </button>
+            </div>
+        </div>
+    <div class="texts">
+        <h2>{{post.title}}</h2>
+    <p class="paragraf">{{post.desc}}</p>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <small>Copyright &copy; 2020 - Poros Blog. All right reserved </small>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/public/js/index.js"></script>
+</body>
+</html>

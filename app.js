@@ -1,20 +1,39 @@
 const express = require("express");
 const Mongoose = require("mongoose");
+// const session = require('express-session');
 const bodyParser = require("body-parser");
-const cors = require("cors");
+const hbs = require('express-handlebars');
+const multer = require('multer');
 const app = express();
-const port = process.env.PORT || 8000;
+const path = require('path');
+const port = process.env.PORT || 5000;
 const authRoute = require("./Routes/auth");
-const userRoute = require("./Routes/users");
 const postRoute = require("./Routes/posts");
-const categoryRoute = require("./Routes/categories");
-
 require('dotenv/config');
-app.use(express.json());
 
-// Middlewares
-app.use(cors());
-app.use(bodyParser.json());
+//view engine setup
+app.engine('hbs', hbs.engine({extname: '.hbs'}));
+app.set('view engine', 'hbs');
+app.use(express.static(__dirname));
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true}));
+
+//image
+const storage = multer.diskStorage({
+    destination: (req, file , cb) => {
+        cb(null, './public/uploads/images');
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + file.originalname);
+    },
+})
+
+const upload = multer({
+    storage:storage,
+    limists:{
+        fieldSize: 1024 * 1024 * 3
+    },
+})
 
 // Connceting to Database
 Mongoose.connect(
@@ -23,11 +42,11 @@ Mongoose.connect(
     () => console.log('Database Connected')
 );
 
+
 // Routes
-app.use('/api/auth', authRoute);
-app.use('/api/users', userRoute);
-app.use('/api/posts', postRoute);
-app.use('/api/categories', categoryRoute);
+app.use('/', postRoute);
+app.use('/auth/', authRoute);
+
 
 // Start Server
 app.listen(port, () => {
