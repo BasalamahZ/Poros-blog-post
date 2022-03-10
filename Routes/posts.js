@@ -20,6 +20,7 @@ const upload = multer({
 })
 
 router.get('/', service.homeRoutes);
+router.get('/profil', service.profileRoutes);
 router.get('/post', service.readPostRoutes);
 router.get('/create', service.postRoutes);
 router.get('/post/update/:id', service.updateRoutes);

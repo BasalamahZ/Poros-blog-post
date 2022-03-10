@@ -165,26 +165,52 @@ section h3 {
   margin-bottom: 10px;
   box-sizing: border-box;
 }
-
-.card:hover {
-  transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+.card:hover{
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
 }
 
-.card p {
-  margin: 10px 0;
-  padding: 0px 10px;
+
+.card .type{
+    margin-top: 10px;
+    padding: 0px 20px;
+    color: white;
+}
+.card a{
+    padding: 5px 8px;
+    background-color: #0db8de;
+    /* float: right; */
+    display: inline-block;
+    /* align-items: center; */
+    text-align: center;
+    border-radius: 13px;
+    width: 70%;
+    margin:10px 15% ;
 }
 
-.card a {
-  padding: 5px 8px;
-  background-color: #0db8de;
-  float: right;
+.card a:hover{
+    color: white;
+    background-color: #02495a;
+    transform: scale(1.1);
 }
-
-.card a:hover {
-  background-color: #444444;
-  color: white;
+.card .penulis{
+  text-align: center;
+}
+.card .penulis{
+    color: rgba(255, 255, 255, 0.483);
+}
+.card .type{
+margin-left: 5%;
+margin-top: 2%;
+margin-bottom: 2%;
+padding: 1% 3%;
+border-radius: 25px;
+display: inline-block;
+background-color: #0db8de;
+}
+.card .judule{
+text-align: center;
+font-size: larger;
 }
 
 footer {
@@ -438,4 +464,18 @@ h2 {
     font-size: 1rem;
     width: 20%;
   }
+  h5 .judule{
+    text-align: center;
+    font-size: larger;
+    }
+}
+
+.profile-footer{
+  width: 100%;
+  background-color: #0db8de;
+  bottom: 0px;
+  padding: 30px 0px;
+  text-align: center; 
+  color: #222d32;
+  position: absolute;
 }

@@ -42,3 +42,7 @@ exports.registerRoutes = (req, res) => {
 exports.loginRoutes = (req, res) => {
     res.render('login')
 }
+
+exports.profileRoutes = (req, res) => {
+    res.render('profil')
+}

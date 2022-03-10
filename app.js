@@ -1,11 +1,9 @@
 const express = require("express");
 const Mongoose = require("mongoose");
-// const session = require('express-session');
 const bodyParser = require("body-parser");
 const hbs = require('express-handlebars');
 const multer = require('multer');
 const app = express();
-const path = require('path');
 const port = process.env.PORT || 5000;
 const authRoute = require("./Routes/auth");
 const postRoute = require("./Routes/posts");
@@ -41,7 +39,6 @@ Mongoose.connect(
     { useNewUrlParser: true }, 
     () => console.log('Database Connected')
 );
-
 
 // Routes
 app.use('/', postRoute);
